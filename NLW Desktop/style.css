@@ -1,0 +1,89 @@
+* {
+  margin: 0px;
+}
+
+html,
+body {
+  background: #121214;
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  background: url(imagens/Desktop.png);
+  width: 1440px;
+  height: 812px;
+}
+
+.container {
+  max-width: 357px;
+  max-height: 541px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative; /*Vai servir de referência do position*/
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1; /* Voltar a ficar em cima da imagem mexendo com o eixo Z */
+}
+
+.avatar > img {
+  /*Vai procurar a imagem de primeiro nível*/
+  width: 10rem;
+  height: 11.5;
+  object-fit: cover; /*Ficar com a proporção correta*/
+  clip-path: polygon(
+    50% 0,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0 75%,
+    0 25%
+  ); /*http://bennettfeely.com/clippy/*/
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none; /* Tirar as bolinhas */
+  padding: 0; /* alinhado ao meio */
+  display: flex; /* Um do lado do outro no eixo x */
+  gap: 0.5rem; /* Espaço entre eles */
+  justify-content: center;
+}
